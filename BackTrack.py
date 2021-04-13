@@ -11,7 +11,7 @@ weight = [508,1021,1321,111,1098,1196,204,939,1107,399,474,719,803,1054,1781,
 profit = [408,921,1329,11,998,1009,104,839,943,299,374,673,703,954,1657,
           425,950,1375,430,541,971,332,483,815,654,706,1360,956,992,1948]
 
-
+#动态规划算法求解0-1背包问题
 class onezerobag:
     def __init__(self, w, v, c):
         self.w = w
@@ -54,8 +54,7 @@ class onezerobag:
         which.reverse()
         return which, values[values.shape[0]-1, values.shape[1]-1]
 
-
-
+#回溯算法求解0-1背包问题
 class backTrackingMethod:
     def __init__(self, w, v, c, cw, cp, bestp):
         self.w = np.array(w)
@@ -126,12 +125,10 @@ class backTrackingMethod:
             self.back_tracking(i+1, visit)
         return visit, self.bestp
 
-
-
-#### 用户选择解决0-1背包问题的方法
+# 用户选择解决0-1背包问题的方法
 print('请选择解决的方法：')
-print('选择动态规划解决请按‘1’：')
-print('选择回溯法解决请按‘2’：')
+print('选择动态规划解决请按 1 ：')
+print('选择回溯法解决请按 2 ：')
 print('请输入你的选项：')
 x=input()
 if x=='1':
